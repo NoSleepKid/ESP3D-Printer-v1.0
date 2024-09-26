@@ -1,58 +1,62 @@
 # ESP3D-Printer-v1.0
 
-## OVERVIEW (BECAUSE EVERY GOOD PROJECT NEEDS ONE, RIGHT?)
-Welcome to the **ESP3D-Printer-v1.0**, the ultimate 3D printer controller built **from the ground up** with surgical precision, honed by countless hours of engineering wizardry, and designed with one thing in mind: **performance**. This bad boy is unlike anything you’ve seen before. It’s a self-contained powerhouse, built specifically to **parse and execute** **Tevo G-code files** (*and ONLY Tevo G-code files*). That’s right, this controller doesn’t just print, it **prints with focus**, like a laser-guided missile locked onto your DIY dreams.
+## OVERVIEW (OR "WHY THIS PRINTER IS COOLER THAN YOUR EX")
+Welcome to **ESP3D-Printer-v1.0**, my **still-in-progress**, Wi-Fi-powered **3D printing masterpiece** that’s not ready for the masses—**yet**. This isn’t your average, run-of-the-mill 3D printer controller; no sir. This one was **built from scratch**, designed to work only with **Tevo Tarantula G-code files** (because why not make things more complicated?). It’s powered by the almighty **ESP32**, because I wanted something that would make you feel like a Jedi in a world full of padawans. And no, **nobody else** has tried it yet. It’s so exclusive that **even I am still figuring it out**.
 
-This project is packed with enough tech to make even the most seasoned nerd's heart skip a beat. It’s powered by **Wi-Fi**, with a robust 12V power system, an integrated USB webcam for real-time streaming, and a motorized belt system that brings out the true potential of 3D printing technology.
+Oh, and **disclaimer**: the printer’s bed is a humble **255x255mm**—so yeah, it’s smaller than your mom. But let’s be real, so is pretty much **everything** else.
 
-### WHY BUILD IT FROM SCRATCH? BECAUSE WE CAN.
-Unlike other projects that **recycle off-the-shelf firmware** or slap together modules like Frankenstein, the **ESP3D-Printer-v1.0** was born from pure, unbridled **nerdy ambition**. We’re not here to make some *generic* firmware that can be used for anything. No, we are here to support **one specific purpose**—the **Tevo Tarantula G-code format**—because if you're going to do something, you might as well do it perfectly.
+## TECHNICAL SPECIFICATIONS (LET'S GEEK OUT)
+- **ESP3D Firmware** — This isn’t some firmware I found in the back of a drawer. No, it’s custom **ESP3D firmware** that I personally stitched together, line by glorious line. Why? Because I’m a perfectionist, and open-source is life.
+  
+- **Wi-Fi Powered** — Yes, **Wi-Fi**. Forget the days of fumbling around with USB cables like it’s 2010. Now you can upload files and monitor your prints remotely, making it easier to blame your bad print on **lag** instead of your setup.
+  
+- **12V 3A Power Supply** — Like any good piece of tech, it runs on a diet of **12 volts** and **3 amps**. Sure, I could’ve gone bigger, but this is enough juice to keep things chugging along without needing to rewire your house.
+  
+- **Node MCU ESP32S v1.1** — This bad boy has **Wi-Fi**, **Bluetooth**, and more processing power than most people need to make their morning toast. It’s the brain of this operation, keeping everything running smoothly.
+  
+- **Tevo Tarantula G-code Parsing** — It’s picky. This firmware **only** parses `.gcode` files for the **Tevo Tarantula**. Other G-codes need not apply unless you like breaking things. It's like a bouncer at a club that only lets in **one** type of file. Sorry, not sorry.
+  
+- **USB Webcam Support** — If you’re not live-streaming your 3D prints, are you even printing? Connect a USB webcam, sit back with a drink, and watch the magic unfold in real-time. It’s basically **print porn**—but, you know, the kind that’s safe for work. Probably.
 
-Brace yourself for the deep dive into what makes this project tick. If you’ve ever wondered what it would be like to harness the true power of **ESP32 Wi-Fi chips**, now is your chance. This is **DIY printing** taken to its **absolute limits**. Let’s geek out!
+- **Belt Powered** — Lead screws? Ha! Those are for amateurs. This baby is **belt-driven** for faster, smoother, and more precise printing. Think of it like a high-end **sports car** compared to your uncle’s station wagon. And who doesn’t love speed and precision?
 
-### CORE SPECIFICATIONS (A.K.A. THE MEATY STUFF)
-- **ESP3D Firmware** — Let’s start with the brain of this operation. This isn’t your run-of-the-mill 3D printer firmware. **ESP3D** is an **open-source** marvel, coded with meticulous care to handle every nook and cranny of the Tevo G-code format. It’s lean, fast, and fully customizable.
-- **Wi-Fi Powered** — Forget cables. This machine thrives on **Wi-Fi freedom**. With an ESP32 at the helm, it can connect to your network, manage G-code files, and stream live updates directly to your devices. The only wires you’ll need are the ones connecting your motors. Everything else? Done wirelessly.
-- **12V 3A Power Supply** — We run on **serious juice**. The **12V 3A power supply** keeps everything running smooth, from the controller to the motors. No power hiccups. No under-voltage. Just pure, stable energy to drive your printer to perfection.
-- **Node MCU ESP32S v1.1** — The ESP32 is the **brains** of the operation. And not just any ESP32—this is the **Node MCU ESP32S v1.1**—the **Rolls-Royce** of Wi-Fi-enabled microcontrollers. It’s equipped with **dual-core processing**, integrated Wi-Fi and Bluetooth, and can handle the G-code parsing like a pro.
-- **Exclusive G-code Parsing** — Built from scratch with a laser-sharp focus on Tevo Tarantula G-code files. That’s right. This isn’t a printer for the masses. This is a **precision-engineered**, specialized tool for those who know the **Tevo Tarantula** inside and out.
-- **USB Webcam Support** — Because we know you love watching your prints as they unfold in glorious real-time. Plug in a **USB webcam** and stream your progress like a pro. Whether it’s for diagnostics or just pure printing pleasure, the webcam is your window into the mesmerizing world of extrusion.
-- **Belt Powered** — Forget lead screws. Lead screws are for printers stuck in the **past**. This bad boy runs on **belts**, delivering the kind of speed and precision you only find in racing cars. It’s fast, it’s smooth, and it’s **beautiful**.
+## SETUP GUIDE (BECAUSE WE ALL NEED HAND-HOLDING SOMETIMES)
+Alright, here’s how you put this thing together (once I’ve fully figured it out, that is). For now, you’re trusting **me**, and trust me, I’ve definitely got some experience in 3D printing… well, maybe a bit too much.
 
-### GETTING STARTED (AKA WHY YOU SHOULD BE EXCITED)
-If your heart skips a beat when you hear the words **Wi-Fi flashing**, **motor control** or **G-code**, you’re in for a treat. Here’s the step-by-step breakdown of how to get your **ESP3D-Printer** up and running:
-
-1. **Step One:** Flash the **ESP3D firmware** to your **Node MCU ESP32S v1.1**. Don’t know how? Time to dive into some **firmware flashing tutorials**. You'll need to connect your ESP32 via USB, fire up your favorite flashing software (be it **esptool**, **PlatformIO**, or even **Arduino IDE**), and load the **ESP3D firmware** into it like the seasoned pro you are.
+1. **Step One:** Flash the **ESP3D firmware** onto the **Node MCU ESP32S v1.1**. If you don’t know how to do that, you might want to sit down and spend the next few hours falling into an endless loop of **YouTube tutorials** and **forum posts**. Welcome to the rabbit hole.
    
-2. **Step Two:** Assemble your **gantry**. That’s right, we’re not just talking about firmware here—you’ll be building the **physical skeleton** of the printer from scratch. Get your frame ready, assemble it with care, and get that **Tevo-ready belt drive** installed like a boss.
+2. **Step Two:** Connect the printer to **Wi-Fi** because physical cables are **so last decade**. Once connected, just imagine yourself controlling prints from anywhere—your couch, your bed, even the **bathroom** (because let’s be real, we all do it).
    
-3. **Step Three:** **Add the motors**. No 3D printer is complete without a set of finely-tuned stepper motors to drive the action. Slot them into place, and don’t forget to connect them to your motor drivers like the master builder you are.
-
-4. **Step Four:** **Wire it up**. This is where the fun really starts. Carefully route your wires, making sure everything is connected in perfect harmony. Whether you’re soldering or using connectors, make sure the **ESP32**, motors, and power supply are all in sync.
+3. **Step Three:** Set up a **USB webcam** to watch your prints in action. There’s nothing like **live-streaming** your own genius, right? Plus, it gives you something to stare at while your print slowly becomes a masterpiece.
    
-5. **Done!** That’s it. Flash. Assemble. Wire. **Print**. It’s that easy. If you follow these steps and fire up your printer, you’ll be on your way to **G-code nirvana**.
+4. **Step Four:** Plug in that **12V 3A power supply** like a **boss**. We didn’t go full nuclear on the power because, well, **this printer isn’t a death machine** (but you never know—improper wiring might get exciting).
+   
+5. **Step Five:** Load up some **Tevo Tarantula G-code** files. Don’t try to feed it some random stuff from Thingiverse. This printer has standards, okay? Only **Tevo Tarantula-approved G-code** allowed. It’s basically the fine dining of G-codes.
 
-### THINGS YOU’LL NEED TO TELL YOUR FRIENDS ABOUT (BRAGGING RIGHTS)
-- **Firmware Name:** **ESP3D** — This is not your typical firmware. It’s hand-crafted, custom-built, and optimized specifically for **Tevo G-code** files. If anyone asks, yes, it’s very exclusive.
-- **Wi-Fi Connectivity:** Did I mention this thing runs on **Wi-Fi**? It connects seamlessly to your network and gives you **complete wireless control**. You can manage prints, monitor progress, and show off to your friends from anywhere. 
-- **USB Webcam Support:** Watch in real-time as your **creation** takes form, layer by layer, via your high-tech webcam setup.
-- **Customizable Everything:** The open-source firmware means you can tweak and modify to your heart’s content. Want more features? Add them. Want to tinker with the G-code parsing algorithm? Go ahead. It’s yours to play with.
+## WHAT YOU GET TO BRAG ABOUT (AS IF THIS NEEDS MORE COOL POINTS)
+- **ESP3D Firmware** — A niche, nerdy firmware that **nobody else has tried**, because you’re on the bleeding edge of innovation. When you flash it, you're **literally** pioneering something fresh.
+  
+- **Wi-Fi Connectivity** — No more tripping over USB cables. You can tell everyone you’re running your 3D printer from **the cloud** (because it sounds fancier than it actually is).
+  
+- **USB Webcam Streaming** — Why wait next to your printer when you can stare at it from the **comfort of your bathroom**? Yes, this is the future. Plus, you can brag about watching your prints live in 4K (or whatever quality your webcam can handle).
+  
+- **Belt Driven** — Flex on your friends with lead-screw setups. Belts mean speed and precision, and let’s face it, speed wins. **Sorry, not sorry.**
 
-### ASSEMBLY TUTORIAL (FOR THOSE WHO NEED TO VISUALIZE THEIR SUCCESS)
-Not everyone can just read through technical specs and envision a fully assembled printer. If you need a **visual guide** to get your ESP3D-Printer up and running, check out my **YouTube tutorial**:
+## YOUTUBE TUTORIAL (BECAUSE WE KNOW YOU NEED VISUALS)
+If this text-based walkthrough isn’t doing it for you, don’t worry—I made a video. It’s on my YouTube channel, **[@NoSleepKid1](https://www.youtube.com/@NoSleepKid1)**. I walk through everything from flashing firmware to wiring up the motors. 
 
-**[@NoSleepKid1](https://www.youtube.com/@NoSleepKid1)**
+**Pro tip:** I may or may not say a few curse words when things go wrong, but hey, that’s part of the experience. Don’t forget to like, subscribe, and hit that notification bell—because we both know you want more **ESP32 nerdery** in your life.
 
-The tutorial covers everything you need to know, from flashing the firmware to assembling the gantry, wiring the motors, and pressing "GO". I promise you’ll be printing in no time. **Don’t forget to like, subscribe, and hit that notification bell**, because you’ll want to keep up with all the future **ESP32-powered projects** I have in store!
+## LICENSE (OR LACK THEREOF, BECAUSE I’M NOT A LAWYER)
+No fancy licenses here. This isn’t under **MIT** or **GPL** or any other legal mumbo jumbo. **Do what you want with it.** Fork it, clone it, hack it, break it, fix it, or just stare at the code in awe of my brilliance. Just don’t ask me for a refund if things go south. This isn’t Amazon.
 
-### LICENSE (BECAUSE WE’RE OPEN-SOURCE NERDS)
-This project is open source under the [MIT License](https://opensource.org/licenses/MIT). You are free to fork it, remix it, and share it with the world. Just remember, when you make something cool out of it, spread the word, and maybe send me a shout-out. **Collaboration is king**.
-
-### DISCLAIMERS (BECAUSE LAWYERS, AM I RIGHT?)
-- This firmware is built specifically for **Tevo G-code files**. It won’t work with your fancy other printer G-codes, no matter how much you want it to.
-- If things go up in smoke or stop working unexpectedly, hey, that’s part of the journey. Just don’t say I didn’t warn you.
-- I’m not responsible for any failed prints, messy wiring jobs, or Wi-Fi issues that make you question your entire existence as a maker.
+## DISCLAIMERS (FOR LEGAL REASONS, OBVIOUSLY)
+- **This printer is still being developed**, and you’re looking at a prototype. I’m the **only one who’s tested it** so far, and it works for me… most of the time. If it doesn’t work for you, congrats—you’ve joined the beta testing team.
+  
+- The print bed is **255x255mm**, so your giant dreams (or your mom) might not fit on it. Sorry, **she’s just too big**. But hey, **small is efficient**, and **it’s what you do with the printer that counts**, right?
+  
+- If your print starts smoking, making weird noises, or **twerking** on the table, stop and double-check your wiring. And maybe grab a fire extinguisher, just in case. **I am not responsible** for your smoke alarms going off.
 
 ---
 
-Welcome to the world of **ESP32-powered 3D printing**. You’ve officially entered the **elite tier** of DIY builders. **Enjoy the ride**.
+Welcome to the future of **Wi-Fi-enabled 3D printing**, where **everything’s nerdy** and the printer bed might be small, but the possibilities are **endless**.
